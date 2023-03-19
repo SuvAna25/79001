@@ -2,11 +2,11 @@ count_number = int(input('Кол-во чисел в списке: '))
 number_list = []
 
 for i in range(count_number):
-    print('Введите', i + 1, 'число: ', end = '  ')
+    print('Введите', i + 1, 'число: ', end='  ')
     number = int(input())
     number_list.append(number)
 
-k_number = int(input('введите делитель: '))
+k_number = int(input('Введите делитель: '))
 count = 0
 
 for num in range(count_number):
