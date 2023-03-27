@@ -12,4 +12,5 @@ print('Новый ассортимент: ', goods)
 
 for good in goods:
     good[1] = round(good[1] * 1.08 , 2)
+print()
 print('Новый ассортимент с увел. ценой: ', goods)
