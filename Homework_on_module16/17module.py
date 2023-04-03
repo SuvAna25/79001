@@ -1,14 +1,5 @@
 
 
-#задача 3
-import random
-
-#first_team = [round(random.uniform(5, 10),2) for _ in range(20)]
-#second_team = [round(random.uniform(5, 10), 2) for _ in range(20)]
-#winners = [first_team if first_team > second_team else second_team]
-
-#print('Первая команда:', first_team, '\n', 'Вторая команда:', second_team)
-#print('Победители тура:', winners)
 
 #задача 4
 #alphabet = 'abcdefg'
