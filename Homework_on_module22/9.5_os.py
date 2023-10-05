@@ -19,8 +19,10 @@ def get_text(path_to_file):
         result += line
     return result
 
+
 all_file = find_file('..', '.py')
 file_result = open('skripts.txt', 'w', encoding='utf-8')
 for file_path in all_file:
     file_result.write(get_text(file_path))
     file_result.write('\n' * 2 + '*' * 80 + '\n' * 2)
+file_result.close()
