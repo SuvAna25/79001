@@ -1,17 +1,19 @@
 
-count_line = 0
-
-try:
-    palindrome_file = open('palindrome.txt', 'r', encoding='utf-8').read()
-    for i_line in palindrome_file:
-        clear_line = i_line.rstrip()
-        if clear_line.isalpha() and clear_line == clear_line[::-1]:
-            count_line += 1
-        else:
-            raise ValueError('Строка не полностью состоит из букв!')
-
-except ValueError as exc:
-    errors_file = open('errore.log', 'w', encoding='utf-8').write(str(exc))
+def check_palindrome(word):
+    return word == word[::-1]
 
 
-print(count_line)
+with open('word.txt', 'r', encoding='utf8') as file, open('errors.log', 'w', encoding='utf8') as log_file:
+    count = 0
+
+    for line in file:
+        try:
+            clear_line = line.rstrip()
+            if clear_line.isalpha():
+                count += check_palindrome(clear_line)
+            else:
+                raise ValueError("строка не полностью состоит из букв!")
+        except ValueError as exc:
+            log_file.write(str(exc))
+
+    print(count)
